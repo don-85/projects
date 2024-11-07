@@ -8,13 +8,23 @@ if (typeof window.ethereum !== 'undefined') {
     // Function to request wallet connection and display the wallet address
     async function connectWallet() {
         try {
-            // Request account access
+            // Request account access (this will open MetaMask)
+            console.log('Requesting wallet connection...');
             const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-            const account = accounts[0];
-            walletAddressDisplay.innerText = `Wallet Address: ${account}`;
-            connectWalletButton.innerText = 'Connected';
+            if (accounts.length > 0) {
+                const account = accounts[0];
+                walletAddressDisplay.innerText = `Wallet Address: ${account}`;
+                connectWalletButton.innerText = 'Connected';
+                console.log('Wallet connected:', account);
+            } else {
+                console.log('No accounts found');
+            }
         } catch (error) {
-            console.error('User rejected connection request:', error);
+            console.error('Error connecting to MetaMask:', error);
+            if (error.code === 4001) {
+                // User rejected connection request
+                alert('Connection request was rejected by the user.');
+            }
         }
     }
 
