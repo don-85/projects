@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>River Nile Token - Home</title>
+    <title>Connect MetaMask</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
@@ -39,7 +40,7 @@
         <p>Your gateway to easily buying a cup of coffee or shopping online with crypto.</p>
         <a href="https://pancakeswap.finance/?chain=bsc" target="_blank">Buy Now</a>
     </section>
-    
+
     <footer>
         <h3>Follow Us</h3>
         <p>
@@ -50,5 +51,31 @@
     </footer>
     <script src="script.js"></script> <!-- Link to the JavaScript file -->
     <script src="scripts/connectWallet.js"></script>
+    <script>
+        if (typeof window.ethereum !== 'undefined') {
+            console.log('MetaMask is installed!');
+
+            const connectWalletButton = document.getElementById('connectWallet');
+            const walletAddressDisplay = document.getElementById('walletAddress');
+
+            async function connectWallet() {
+                try {
+                    console.log('Requesting wallet connection...');
+                    const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+                    const account = accounts[0];
+                    walletAddressDisplay.innerText = `Wallet Address: ${account}`;
+                    connectWalletButton.innerText = 'Connected';
+                } catch (error) {
+                    console.error('Error connecting to MetaMask:', error);
+                    alert('Connection request was rejected or an error occurred.');
+                }
+            }
+
+            connectWalletButton.addEventListener('click', connectWallet);
+        } else {
+            console.log('MetaMask is not installed. Please install MetaMask!');
+            alert('MetaMask is not installed. Please install MetaMask to use this feature.');
+        }
+    </script>
 </body>
 </html>
