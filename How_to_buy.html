@@ -24,6 +24,32 @@
 
     <section id="wallet-info">
         <p id="walletAddress">Wallet Address: Not connected</p>
+        <script>
+            if (typeof window.ethereum !== 'undefined') {
+                console.log('MetaMask is installed!');
+    
+                const connectWalletButton = document.getElementById('connectWallet');
+                const walletAddressDisplay = document.getElementById('walletAddress');
+    
+                async function connectWallet() {
+                    try {
+                        console.log('Requesting wallet connection...');
+                        const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+                        const account = accounts[0];
+                        walletAddressDisplay.innerText = `Wallet Address: ${account}`;
+                        connectWalletButton.innerText = 'Connected';
+                    } catch (error) {
+                        console.error('Error connecting to MetaMask:', error);
+                        alert('Connection request was rejected or an error occurred.');
+                    }
+                }
+    
+                connectWalletButton.addEventListener('click', connectWallet);
+            } else {
+                console.log('MetaMask is not installed. Please install MetaMask!');
+                alert('MetaMask is not installed. Please install MetaMask to use this feature.');
+            }
+        </script>
     </section>
 
     <section id="how-to-buy">
