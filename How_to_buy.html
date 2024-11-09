@@ -6,11 +6,118 @@
     <title>River Nile Token - Home</title>
     <title>Connect MetaMask</title>
     <link rel="stylesheet" href="styles/style.css">
+
 </head>
+<style>
+    /* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    background-image: url(block\ 3.jpg);
+   background-position: fixed;
+}
+
+header {
+    background-color: #005480;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+button.button {
+    background-color: #24a0ed;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button.button:hover {
+    background-color: darkgreen;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    background-color:none;
+    color: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+h2 {
+    color:white;
+    text-align: center;
+}
+
+ol {
+    padding-left: 20px;
+}
+
+ol li {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+   margin-bottom: 0;
+    width: 100%;
+    
+}
+
+footer a {
+    color: #59C7EA;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+    }
+}
+
+</style>
 <body>
     <header>
-        <h1>River Nile Token</h1>
-        <button id="connectWallet" class="button">Connect Wallet</button>
+        
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -19,32 +126,21 @@
                 <li><a href="tokenomics.html">Tokenomics</a></li>
                 <li><a href="roadmap.html">Roadmap</a></li>
             </ul>
-        </nav>        
+        </nav>   
+        <h1>River Nile Token</h1>
+        <button id="connectWallet"  class="button">  <a href="qrcode1.html" target="_blank" style="text-decoration: none; color: white;">Get RVNL Token TRC20</a></button>     
+        <button id="connectWallet"  class="button">  <a href="qrcode.html" target="_blank" style="text-decoration: none; color: white;">Get RVNL Tokens BEP20</a></button>     
     </header>
-
-    <section id="wallet-info">
-        <p id="walletAddress">Wallet Address: Not connected</p>
-        
-    </section>
 
     <section id="how-to-buy">
         <h2>How to Buy RVNL</h2>
-        <p>Follow these steps to purchase River Nile Token (RVNL) on PancakeSwap, one of the leading decentralized exchanges on the Binance Smart Chain:</p>
-        <ol>
-            <li><strong>Wallet Setup:</strong> If you haven’t already, download and set up a wallet that supports Binance Smart Chain (BSC). MetaMask is a popular choice among DeFi users. Ensure you connect your wallet to the Binance Smart Chain network.</li>
-            <li><strong>Fund Your Wallet:</strong> Transfer BNB (Binance Coin) to your wallet. BNB is required to trade on PancakeSwap and pay for transaction fees on BSC.</li>
-            <li><strong>Access PancakeSwap:</strong> Go to <a href="https://pancakeswap.finance" target="_blank">PancakeSwap</a>. Connect your wallet using the "Connect" button on the top right of the page.</li>
-            <li><strong>Swap for RVNL:</strong> Once your wallet is connected, go to the "Trade" section and select "Exchange" from the dropdown menu. In the exchange interface, set BNB as the source currency and search for RVNL using the address provided in your whitepaper or the token list.</li>
-            <li><strong>Adjust Settings:</strong> Click on the settings gear icon and adjust your slippage tolerance. We recommend starting with a slippage of 0.5% to 1%.</li>
-            <li><strong>Confirm the Transaction:</strong> Enter the amount of BNB you want to swap for RVNL. Review the transaction details including the impact of price, liquidity provider fee, and minimum received tokens after slippage. When ready, confirm the swap and approve the transaction in your wallet.</li>
-            <li><strong>Transaction Completion:</strong> Wait for the transaction to be processed. This might take a few seconds to a few minutes depending on the network congestion. Once confirmed, your RVNL tokens will appear in your wallet.</li>
-        </ol>
-        <p>Note: Trading on decentralized exchanges carries risks, including high slippage and impermanent loss. Make sure to do your own research and understand the risks before trading.</p>
+      
     </section>
 
     <footer>
         <p>Follow us on <a href="https://x.com" target="_blank">X Platform</a>, <a href="https://telegram.me" target="_blank">Telegram</a>, and <a href="https://instagram.com" target="_blank">Instagram</a>.</p>
     </footer>
+
     <script src="script.js"></script>
     <script>
         if (typeof window.ethereum !== 'undefined') {

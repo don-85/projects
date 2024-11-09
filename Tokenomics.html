@@ -4,8 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>River Nile Token - Home</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <link rel="stylesheet" href="styles/style.css">
+
 </head>
+<style>
+    /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f7f8fa;
+    color: #333;
+    line-height: 1.8;
+    padding: 20px;
+    background-image: url(block\ 6.jpg);
+    background-position: fixed;
+}
+
+header {
+    background-color: #005480;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    background-color: none;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* width: 80%; */
+    /* text-align: center; */
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+h2, h3 {
+    color: white;
+}
+
+ul {
+    margin-top: 10px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #ffbb33;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+   /* Setting the canvas size for the chart */
+   #tokenomicsChart {
+            width: 20px; /* You can adjust the width here */
+            height: 20px; /* And the height here */
+        }
+        label{
+            color: white;
+        }
+</style>
 <body>
     <header>
         <h1>River Nile Token</h1>
@@ -25,14 +135,10 @@
         <p>The River Nile Token (RVNL) is engineered to support robust economic activities within its ecosystem, fostering growth and sustainability. The tokenomics are designed to incentivize all stakeholders while ensuring long-term viability and utility.</p>
         
         <h3>Token Distribution</h3>
-        <ul>
-            <li><strong>Total Supply:</strong> 1,000,000,000,000 RVNL</li>
-            <li><strong>Liquidity Pool:</strong> 30% - To provide ample liquidity on decentralized exchanges like PancakeSwap.</li>
-            <li><strong>Development Fund:</strong> 20% - To finance ongoing development, updates, and project scaling needs.</li>
-            <li><strong>Community Rewards:</strong> 25% - Allocated for staking rewards, airdrops, and other community incentives.</li>
-            <li><strong>Marketing and Partnerships:</strong> 15% - For promoting the token, securing partnerships, and expanding market reach.</li>
-            <li><strong>Team Reserve:</strong> 10% - Held for the team with a vesting period to align team incentives with project success.</li>
-        </ul>
+        <div>
+            <canvas id="tokenomicsChart"></canvas>
+        </div>
+        
     
         <h3>Transaction Fees</h3>
         <p>Transaction fees on the network are set between 0.01% and 1%, varying by transaction type. These fees are utilized for:</p>
@@ -56,10 +162,61 @@
         <h3>Future Plans</h3>
         <p>As outlined in our roadmap, RVNL aims to expand its utility through strategic partnerships, increasing accessibility, and enhancing user engagement through governance features. The tokenomics will evolve to adapt to new opportunities and challenges in the blockchain space.</p>
     </section>
+    
 
     <footer>
         <p>Follow us on <a href="https://x.com" target="_blank">X Platform</a>, <a href="https://telegram.me" target="_blank">Telegram</a>, and <a href="https://instagram.com" target="_blank">Instagram</a>.</p>
     </footer>
+    <script>
+        var ctx = document.getElementById('tokenomicsChart').getContext('2d');
+        var tokenomicsChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Liquidity Pool', 'Development Fund', 'Community Rewards', 'Marketing and Partnerships', 'Team Reserve'],
+                datasets: [{
+                    label: 'Token Distribution',
+                    data: [30, 20, 25, 15, 10],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        enabled: true,
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                let sum = 0;
+                                let dataArr = tooltipItem.dataset.data;
+                                dataArr.map(data => {
+                                    sum += Number(data);
+                                });
+                                let percentage = (tooltipItem.raw / sum * 100).toFixed(1);
+                                return `${tooltipItem.label}: ${percentage}%`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
     <script src="script.js"></script>
     <script src="scripts/connectWallet.js"></script>
 </body>

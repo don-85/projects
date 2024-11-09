@@ -1,163 +1,104 @@
-/* Basic Reset */
-* {
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif; /* Sets the font for the body */
+    color: #333; /* Default text color */
+    background-color: #f4f4f4; /* Background color for the entire page */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    color: #e0e0e0; /* Light grey for readability */
-    background-color: #0d1117; /* Dark background for the main theme */
-    line-height: 1.6;
-    text-align: center; /* Center all text content by default */
 }
 
 header {
-    background-color: #161b22; /* Dark header background */
-    color: #ffffff;
-    padding: 20px 5%;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.logo {
-    width: 50px;
-    height: auto;
-    border-radius: 8px;
+    background-color: #0063B1ff; /* Dark blue background for the header */
+    color: #ffffff; /* White text color for header */
+    padding: 10px 20px; /* Padding inside the header */
+    text-align: center; /* Center aligning the text in the header */
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 15px;
+    list-style-type: none; /* Removes bullet points from the list */
+    padding: 0; /* Removes padding around the list */
+}
+
+nav ul li {
+    display: inline; /* Displays list items in a row */
+    margin-right: 10px; /* Spacing between the list items */
 }
 
 nav ul li a {
-    color: #e0e0e0;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: color 0.3s, background-color 0.3s;
+    color: #ffffff; /* Text color for links */
+    text-decoration: none; /* Removes underline from links */
 }
 
 nav ul li a:hover {
-    background-color: #1f6feb;
-    color: #ffffff;
+    text-decoration: underline; /* Underlines links on hover */
 }
 
+/* Section styling */
 section {
-    padding: 20px 10%;
-    margin: 20px auto;
-    background-color: #161b22; /* Dark section background */
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    max-width: 900px;
-    color: #e0e0e0;
-    text-align: center; /* Center align text inside sections */
+    background-color: #ffffff; /* White background for sections */
+    margin: 20px; /* Margin around sections */
+    padding: 20px; /* Padding inside sections */
+    border-radius: 8px; /* Rounded corners for sections */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow around sections */
 }
 
-section h2 {
-    color: #58a6ff; /* Light blue accent for headings */
-    margin-bottom: 10px;
-    text-align: center;
+h1, h2, h3 {
+    color: #333; /* Dark text for headings */
 }
 
-section p, section ol, section ul {
-    margin-bottom: 15px;
-    color: #c9d1d9; /* Slightly lighter text */
-    font-size: 1.1em;
-    text-align: center; /* Center align list and paragraph content */
+h1 {
+    font-size: 24px; /* Larger font size for h1 */
 }
 
-.button {
-    background-color: #1f6feb;
-    color: #ffffff;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    margin: 10px 5px;
-    transition: background-color 0.3s, transform 0.3s;
+h2 {
+    font-size: 20px; /* Medium font size for h2 */
 }
 
-.button:hover {
-    background-color: #58a6ff;
-    transform: scale(1.05); /* Slightly enlarges on hover */
+h3 {
+    font-size: 18px; /* Smaller font size for h3 */
 }
 
-footer {
-    background-color: #161b22; /* Matching footer color */
-    color: #ffffff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
+img {
+    max-width: 100%; /* Makes images responsive */
+    height: auto; /* Maintains aspect ratio */
 }
 
-footer p a {
-    color: #58a6ff;
-    text-decoration: none;
-    padding: 0 10px;
-}
-
-footer p a:hover {
-    text-decoration: underline;
-}
-
-#hero {
-    text-align: center;
-    padding: 50px 0;
-    background-color: #0d1117;
-    color: #58a6ff;
-}
-
-#hero h2 {
-    font-size: 2.5em;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #58a6ff;
-}
-
-#hero p {
-    color: #c9d1d9;
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+.footer {
+    background-color: #222; /* Dark background for the footer */
+    color: #ccc; /* Light text color for the footer */
+    text-align: center; /* Center-aligns the text in the footer */
+    padding: 20px 0; /* Padding inside the footer */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .button {
-    background-color: #1f6feb;
-    color: #ffffff;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.3s;
+    background-color: #0063B1ff; /* Blue background for buttons */
+    color: #ffffff; /* White text color for buttons */
+    border: none; /* No borders on buttons */
+    padding: 10px 20px; /* Padding inside buttons */
+    text-align: center; /* Center-aligns text inside buttons */
+    text-decoration: none; /* Removes underline from text */
+    display: inline-block; /* Allows setting dimensions */
+    font-size: 16px; /* Text size inside buttons */
+    margin: 4px 2px; /* Margin around buttons */
+    cursor: pointer; /* Changes cursor to pointer when hovering over button */
+    border-radius: 5px; /* Rounded corners for buttons */
 }
 
 .button:hover {
-    background-color: #58a6ff;
-    transform: scale(1.05); /* Slightly enlarges on hover */
+    background-color: #0056a4; /* Darker blue when hovering over button */
 }
 
-#wallet-info {
-    margin-top: 20px;
-    color: #e0e0e0;
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block; /* Stacks the navigation items under each other on small screens */
+        text-align: center; /* Center-aligns the text */
+    }
+
+    .button-container {
+        text-align: center; /* Center-aligns button container for small screens */
+    }
 }

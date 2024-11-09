@@ -6,6 +6,137 @@
     <title>River Nile Token - Home</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
+<style> 
+ /* General Reset and Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    line-height: 1.5;
+    padding: 20px;
+}
+
+header {
+    background-color:#005480;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styling for Roadmap */
+section#roadmap {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+h2, h3 {
+    color: #007bff;
+}
+
+ol {
+    padding-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ol li {
+    flex: 1 1 50%; /* Each li takes up 50% width */
+    margin-bottom: 20px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+    cursor: pointer; /* Indicates the item is interactive */
+    padding: 10px;
+}
+
+ol li:hover {
+    transform: scale(1.05); /* Scales up li on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adds shadow for popping effect */
+}
+
+ol li h3 {
+    display: inline-block; /* Makes h3 inline for background */
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #343a40;
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-top: 10px;
+    }
+
+    ol li {
+        flex: 1 1 100%; /* Each li takes full width on smaller screens */
+        text-align: left; /* Default text alignment on smaller screens */
+        transform: 2px; /* No transform on smaller screens to avoid layout issues */
+        box-shadow: 5px; /* No box-shadow on hover on smaller screens for consistency */
+    }
+
+    ol li h3 {
+        background-color: transparent;
+        color: #007bff;
+        padding: 0;
+    }
+}
+
+</style>
 <body>
     <header>
         <h1>River Nile Token</h1>

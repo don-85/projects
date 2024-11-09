@@ -6,15 +6,131 @@
     <title>River Nile Token - Home</title>
     <title>Connect MetaMask</title>
     <link rel="stylesheet" href="styles/style.css">
+
 </head>
+<style>
+    /* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #fafafa;
+    line-height: 1.6;
+    padding: 20px;
+    background-image: url(block\ 2.jpg);
+}
+
+header {
+    background: #005480;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    background: rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+}
+
+section {
+    background: none;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+h2, h3 {
+    color: #004d99;
+}
+
+ul {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    background: #333;
+    color: #fff;
+    margin-bottom: none;
+    
+}
+
+footer a {
+    color: #f4f4f4;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.button {
+    display: inline-block;
+    background: #0066ff;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background: #0056cc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-top: 10px;
+    }
+}
+h2,p{
+    text-align: center;
+}
+</style>
 <body>
     <header>
         <section id="hero">
             <h2>Trade Crypto With Confidence</h2>
             <p>Access a robust platform offering real-time data, intuitive tools, and seamless execution.</p>
             <div class="button-container">
-                <a href="#" class="button">Get Started</a>
-                <a href="#" class="button">Start Trading</a>
+                <!-- <a href="#" class="button">Get Started</a>
+                <a href="#" class="button">Start Trading</a> -->
             </div>
         </section>
         
@@ -38,7 +154,7 @@
     <section id="home">
         <h2>Welcome to River Nile Token</h2>
         <p>Your gateway to easily buying a cup of coffee or shopping online with crypto.</p>
-        <a href="https://pancakeswap.finance/?chain=bsc" target="_blank">Buy Now</a>
+        <!-- <a href="https://pancakeswap.finance/?chain=bsc" target="_blank">Buy Now</a> -->
     </section>
 
     <footer>
@@ -51,31 +167,5 @@
     </footer>
     <script src="script.js"></script> <!-- Link to the JavaScript file -->
     <script src="scripts/connectWallet.js"></script>
-    <script>
-        if (typeof window.ethereum !== 'undefined') {
-            console.log('MetaMask is installed!');
-
-            const connectWalletButton = document.getElementById('connectWallet');
-            const walletAddressDisplay = document.getElementById('walletAddress');
-
-            async function connectWallet() {
-                try {
-                    console.log('Requesting wallet connection...');
-                    const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-                    const account = accounts[0];
-                    walletAddressDisplay.innerText = `Wallet Address: ${account}`;
-                    connectWalletButton.innerText = 'Connected';
-                } catch (error) {
-                    console.error('Error connecting to MetaMask:', error);
-                    alert('Connection request was rejected or an error occurred.');
-                }
-            }
-
-            connectWalletButton.addEventListener('click', connectWallet);
-        } else {
-            console.log('MetaMask is not installed. Please install MetaMask!');
-            alert('MetaMask is not installed. Please install MetaMask to use this feature.');
-        }
-    </script>
 </body>
 </html>
