@@ -22,15 +22,25 @@ body {
     background-color: #fafafa;
     line-height: 1.6;
     padding: 20px;
-    background-image: url(block\ 2.jpg);
+    background-image: url(block\ 3.jpg);
+    background-size: cover;
 }
 
 header {
-    background: #005480;
+    /* background: #005480; */
+    margin-top: 0;
     color: #fff;
     padding: 10px 20px;
     text-align: center;
+
 }
+.transparent-blue {
+      background-color:  rgba(255, 255, 255, 0.2);
+      color: white; 
+      padding: 20px;
+      text-align: center;
+      /* border: 1px solid #000;  */
+    }
 
 header h1 {
     margin: 0;
@@ -66,7 +76,7 @@ section {
 }
 
 h2, h3 {
-    color: #004d99;
+    color: #FFD700;
 }
 
 ul {
@@ -87,6 +97,13 @@ footer {
     margin-bottom: none;
     
 }
+.transparent-dack {
+      background-color: rgba(128, 128, 128, 0.2);
+      color: white; /* Make text visible on blue background */
+      padding: 20px;
+      text-align: center;
+      /* border: 1px solid #000; */
+    }
 
 footer a {
     color: #f4f4f4;
@@ -122,10 +139,13 @@ footer a:hover {
 h2,p{
     text-align: center;
 }
+p{
+    color: white;
+}
 </style>
 <body>
-    <header>
-        <section id="hero">
+    <header class="transparent-blue">
+        <section id="hero" >
             <h2>Trade Crypto With Confidence</h2>
             <p>Access a robust platform offering real-time data, intuitive tools, and seamless execution.</p>
             <div class="button-container">
@@ -153,11 +173,12 @@ h2,p{
 
     <section id="home">
         <h2>Welcome to River Nile Token</h2>
-        <p>Your gateway to easily buying a cup of coffee or shopping online with crypto.</p>
+        <p>Tokens are digital assets created on blockchains, representing value, ownership, or utility. They are vital to decentralized systems and come in two main types: fungible tokens and non-fungible tokens (NFTs). Fungible tokens like Bitcoin (BTC) or Ethereum (ETH) are interchangeable, while NFTs are unique and often represent digital art or collectibles..</p>
+        <p>Tokens serve various purposes, including currency, governance, and utility. Utility tokens grant access to services, while governance tokens allow voting in decentralized platforms. Common standards, like ERC-20 for fungible tokens and ERC-721 for NFTs, ensure compatibility within ecosystems. Tokens drive innovation and decentralized ownership in blockchain technology.</p>
         <!-- <a href="https://pancakeswap.finance/?chain=bsc" target="_blank">Buy Now</a> -->
     </section>
 
-    <footer>
+    <footer class="transparent-dack">
         <h3>Follow Us</h3>
         <p>
             <a href="https://x.com" target="_blank">X Platform</a>

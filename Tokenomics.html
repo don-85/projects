@@ -20,19 +20,27 @@
 
 body {
     background-color: #f7f8fa;
-    color: #333;
+    /* color: #333; */
     line-height: 1.8;
     padding: 20px;
-    background-image: url(block\ 6.jpg);
+    background-image: url(block\ 3.jpg);
+    background-size: cover;
     background-position: fixed;
 }
 
 header {
-    background-color: #005480;
+    /* background-color: #005480; */
     color: white;
     padding: 10px 20px;
     text-align: center;
 }
+.transparent-blue {
+      background-color:  rgba(255, 255, 255, 0.2);
+      color: white; 
+      padding: 20px;
+      text-align: center;
+      /* border: 1px solid #000;  */
+    }
 
 header h1 {
     font-size: 24px;
@@ -87,10 +95,19 @@ ul li {
 footer {
     text-align: center;
     padding: 15px 0;
-    background-color: #333;
+    /* background-color: #333; */
     color: white;
     margin-top: 20px;
 }
+.transparent-dack {
+      background-color: rgba(128, 128, 128, 0.2);
+      color: white; /* Make text visible on blue background */
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 2px;
+      /* border: 1px solid #000; */
+    }
+
 
 footer a {
     color: #ffbb33;
@@ -112,12 +129,20 @@ footer a:hover {
             width: 20px; /* You can adjust the width here */
             height: 20px; /* And the height here */
         }
+
+        .tokenomicsChart{
+            width: 400px; /* You can adjust the width here */
+            height: 400px;
+            align-items: center;
+            align-content: center;
+        }
         label{
             color: white;
         }
+      
 </style>
 <body>
-    <header>
+    <header class="transparent-blue">
         <h1>River Nile Token</h1>
         <nav>
             <ul>
@@ -135,7 +160,7 @@ footer a:hover {
         <p>The River Nile Token (RVNL) is engineered to support robust economic activities within its ecosystem, fostering growth and sustainability. The tokenomics are designed to incentivize all stakeholders while ensuring long-term viability and utility.</p>
         
         <h3>Token Distribution</h3>
-        <div>
+        <div class="tokenomicsChart">
             <canvas id="tokenomicsChart"></canvas>
         </div>
         
@@ -164,7 +189,7 @@ footer a:hover {
     </section>
     
 
-    <footer>
+    <footer class="transparent-dack">
         <p>Follow us on <a href="https://x.com" target="_blank">X Platform</a>, <a href="https://telegram.me" target="_blank">Telegram</a>, and <a href="https://instagram.com" target="_blank">Instagram</a>.</p>
     </footer>
     <script>

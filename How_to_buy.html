@@ -17,6 +17,7 @@ body {
     line-height: 1.6;
     padding: 20px;
     background-image: url(block\ 3.jpg);
+    background-size: cover;
    background-position: fixed;
 }
 
@@ -26,6 +27,14 @@ header {
     padding: 10px 20px;
     text-align: center;
 }
+.transparent-blue {
+      background-color:  rgba(255, 255, 255, 0.2);
+      color: white; 
+      padding: 20px;
+      text-align: center;
+      /* border: 1px solid #000;  */
+    }
+
 
 header h1 {
     margin: 0;
@@ -39,6 +48,7 @@ button.button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    text-align: center;
 }
 
 button.button:hover {
@@ -74,6 +84,7 @@ section {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     margin-left: 200px;
     margin-right: 200px;
+    text-align: center;
 }
 
 h2 {
@@ -90,14 +101,21 @@ ol li {
 }
 
 footer {
-    text-align: center;
-    padding: 10px 0;
     background-color: #333;
     color: white;
-   margin-bottom: 0;
-    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: 20px;
     
 }
+.transparent-dack {
+      background-color: rgba(128, 128, 128, 0.2);
+      color: white; /* Make text visible on blue background */
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 2px;
+      /* border: 1px solid #000; */
+    }
 
 footer a {
     color: #59C7EA;
@@ -111,12 +129,14 @@ footer a:hover {
 @media (max-width: 768px) {
     nav ul li {
         display: block;
+        text-align: center;
+        margin-top: 10px;
     }
 }
 
 </style>
 <body>
-    <header>
+    <header class="transparent-blue">
         
         <nav>
             <ul>
@@ -128,16 +148,15 @@ footer a:hover {
             </ul>
         </nav>   
         <h1>River Nile Token</h1>
-        <button id="connectWallet"  class="button">  <a href="qrcode1.html" target="_blank" style="text-decoration: none; color: white;">Get RVNL Token TRC20</a></button>     
-        <button id="connectWallet"  class="button">  <a href="qrcode.html" target="_blank" style="text-decoration: none; color: white;">Get RVNL Tokens BEP20</a></button>     
     </header>
 
     <section id="how-to-buy">
         <h2>How to Buy RVNL</h2>
-      
+        <p>Only deposit funds using decentralized crypto wallets. Avoid using wallets from centralized crypto exchanges. Instead, use wallets such as MetaMask or Trust Wallet.</p>
+        <button id="connectWallet"  class="button">  <a href="qrcode2.html" target="_blank" style="text-decoration: none; color: white;">SCAN QR CODE</a></button>     
     </section>
 
-    <footer>
+    <footer class="transparent-dack">
         <p>Follow us on <a href="https://x.com" target="_blank">X Platform</a>, <a href="https://telegram.me" target="_blank">Telegram</a>, and <a href="https://instagram.com" target="_blank">Instagram</a>.</p>
     </footer>
 
