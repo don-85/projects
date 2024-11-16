@@ -33,6 +33,7 @@ header {
     color: white;
     padding: 10px 20px;
     text-align: center;
+    height: 105px;
 }
 .transparent-blue {
       background-color:  rgba(255, 255, 255, 0.2);
@@ -54,9 +55,8 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin: 0 70px;
 }
-
 nav ul li a {
     color: white;
     text-decoration: none;
@@ -115,7 +115,7 @@ footer a {
 }
 
 footer a:hover {
-    text-decoration: underline;
+    text-decoration: blue;
 }
 
 @media (max-width: 768px) {
@@ -139,20 +139,46 @@ footer a:hover {
         label{
             color: white;
         }
-      
+        
+      h1{
+        margin-top: 0%;
+        float: left;
+      }
+      img{
+        margin-top: 0px;
+        border-radius: 50%;
+  object-fit: cover;
+      }
+
+/* @media (max-width: 768px) {
+  ul{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+} */
+
 </style>
 <body>
     <header class="transparent-blue">
-        <h1>River Nile Token</h1>
+        <h1><img src="logo.jpg" alt="River Nile Token Logo" class="logo" width="100px" height="auto">
+        </h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="how_to_buy.html">How to Buy</a></li>
-                <li><a href="tokenomics.html">Tokenomics</a></li>
-                <li><a href="roadmap.html">Roadmap</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="how_to_buy.html">How to Buy</a></li>
+              <li><a href="tokenomics.html">Tokenomics</a></li>
+              <li><a href="roadmap.html">Roadmap</a></li>
+              <!-- <li class="dropdown">
+                <a href="#" class="dropbtn">More</a>
+                <ul class="dropdown-content">
+                  <li><a href="faq.html">FAQ</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </li> -->
             </ul>
-        </nav>        
+          </nav>
+              
     </header>
 
     <section id="tokenomics">

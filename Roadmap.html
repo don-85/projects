@@ -25,11 +25,20 @@ body {
 }
 
 header {
-    background-color:#005480;
+    /* background-color:#005480; */
     color: #ffffff;
     padding: 10px 20px;
     text-align: center;
+    height: 105px;
 }
+.transparent-blue {
+      background-color:  rgba(255, 255, 255, 0.2);
+      color: white; 
+      padding: 20px;
+      text-align: center;
+      /* border: 1px solid #000;  */
+    }
+
 
 header h1 {
     margin: 0;
@@ -43,7 +52,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 70px;
 }
 
 nav ul li a {
@@ -57,7 +66,8 @@ nav ul li a:hover {
 
 /* Section Styling for Roadmap */
 section#roadmap {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
     padding: 20px;
     margin-top: 20px;
     border-radius: 5px;
@@ -67,7 +77,10 @@ section#roadmap {
 }
 
 h2, h3 {
-    color: #007bff;
+    color: goldenrod;
+}
+h2{
+    text-align: center;
 }
 
 ol {
@@ -90,9 +103,9 @@ ol li:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adds shadow for popping effect */
 }
 
-ol li h3 {
+ol li {
     display: inline-block; /* Makes h3 inline for background */
-    background-color: #007bff;
+    background-color:rgba(2, 33, 66, 0.3);
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
@@ -138,17 +151,26 @@ footer a:hover {
         box-shadow: 5px; /* No box-shadow on hover on smaller screens for consistency */
     }
 
-    ol li h3 {
+    ol li {
         background-color: transparent;
-        color: #007bff;
+        color: #031120;
         padding: 0;
     }
 }
-
+h1{
+        margin-top: 0%;
+        float: left;
+      }
+      img{
+        margin-top: 0px;
+        border-radius: 50%;
+  object-fit: cover;
+      }
 </style>
 <body>
-    <header>
-        <h1>River Nile Token</h1>
+    <header class="transparent-blue ">
+        <h1><img src="logo.jpg" alt="River Nile Token Logo" class="logo" width="100px" height="auto">
+        </h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
