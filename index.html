@@ -4,151 +4,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>River Nile Token - Home</title>
-    <title>Connect MetaMask</title>
     <link rel="stylesheet" href="styles/style.css">
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background-color: #fafafa;
+            line-height: 1.6;
+            padding: 20px;
+            background-image: url(block\ 3.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            margin-top: 0;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .transparent-blue {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            padding-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            background: rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 10px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.8);
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+        }
+
+        h2, h3 {
+            color: #FFD700;
+        }
+
+        ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            background: #333;
+            color: #fff;
+        }
+
+        .transparent-dack {
+            background-color: rgba(128, 128, 128, 0.2);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #f4f4f4;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .button {
+            display: inline-block;
+            background: #0066ff;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 5px 0;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background: #0056cc;
+        }
+
+        .logo-container img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            section {
+                padding: 10px;
+            }
+
+            .logo-container img {
+                max-width: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .transparent-blue {
+                padding: 10px;
+            }
+
+            .button {
+                padding: 8px 15px;
+            }
+
+            nav ul li a {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
-<style>
-    /* Reset some default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-    background-color: #fafafa;
-    line-height: 1.6;
-    padding: 20px;
-    background-image: url(block\ 3.jpg);
-    background-size: cover;
-}
-
-header {
-    /* background: #005480; */
-    margin-top: 0;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-
-}
-.transparent-blue {
-      background-color:  rgba(255, 255, 255, 0.2);
-      color: white; 
-      padding: 20px;
-      text-align: center;
-      /* border: 1px solid #000;  */
-    }
-
-header h1 {
-    margin: 0;
-    padding-bottom: 10px;
-}
-
-nav ul {
-    list-style: none;
-    background: rgba(0,0,0,0.1);
-    text-align: center;
-    padding: 10px 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 70px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 700;
-}
-
-section {
-    background: none;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    margin-left: 200px;
-    margin-right: 200px;
-}
-
-h2, h3 {
-    color: #FFD700;
-}
-
-ul {
-    margin: 20px 0;
-    padding-left: 20px;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-footer {
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-    background: #333;
-    color: #fff;
-    margin-bottom: none;
-    
-}
-.transparent-dack {
-      background-color: rgba(128, 128, 128, 0.2);
-      color: white; /* Make text visible on blue background */
-      padding: 20px;
-      text-align: center;
-      /* border: 1px solid #000; */
-    }
-
-footer a {
-    color: #f4f4f4;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-.button {
-    display: inline-block;
-    background: #0066ff;
-    color: #fff;
-    padding: 10px 20px;
-    margin: 5px 0;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.button:hover {
-    background: #0056cc;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin-top: 10px;
-    }
-}
-h2,p{
-    text-align: center;
-}
-p{
-    color: white;
-}
-.logo-container img{
-width: 200px;
-height: auto;
-border-radius: 50%;
-  object-fit: cover;
-}
-</style>
 <body>
     <header class="transparent-blue">
         <nav>
@@ -160,29 +182,21 @@ border-radius: 50%;
                 <li><a href="roadmap.html">Roadmap</a></li>
             </ul>
         </nav>
-        <section id="hero" >
+        <section id="hero">
             <h2>Trade Crypto With Confidence</h2>
             <p>Access a robust platform offering real-time data, intuitive tools, and seamless execution.</p>
-            <div class="button-container">
-                <!-- <a href="#" class="button">Get Started</a>
-                <a href="#" class="button">Start Trading</a> -->
-            </div>
         </section>
-        
         <div class="logo-container">
             <a href="index.html">
-                <img src="logo.jpg" alt="River Nile Token Logo" class="logo"> 
+                <img src="logo.jpg" alt="River Nile Token Logo">
             </a>
             <h1>River Nile Token</h1>
         </div>
-        
-          </header>
+    </header>
 
     <section id="home">
         <h2>Welcome to River Nile Token</h2>
-        <p>Tokens are digital assets created on blockchains, representing value, ownership, or utility. They are vital to decentralized systems and come in two main types: fungible tokens and non-fungible tokens (NFTs). Fungible tokens like Bitcoin (BTC) or Ethereum (ETH) are interchangeable, while NFTs are unique and often represent digital art or collectibles..</p>
-        <p>Tokens serve various purposes, including currency, governance, and utility. Utility tokens grant access to services, while governance tokens allow voting in decentralized platforms. Common standards, like ERC-20 for fungible tokens and ERC-721 for NFTs, ensure compatibility within ecosystems. Tokens drive innovation and decentralized ownership in blockchain technology.</p>
-        <!-- <a href="https://pancakeswap.finance/?chain=bsc" target="_blank">Buy Now</a> -->
+        <p>Tokens are digital assets created on blockchains, representing value, ownership, or utility...</p>
     </section>
 
     <footer class="transparent-dack">
@@ -193,7 +207,7 @@ border-radius: 50%;
             <a href="https://instagram.com" target="_blank">Instagram</a>
         </p>
     </footer>
-    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
     <script src="scripts/connectWallet.js"></script>
 </body>
 </html>

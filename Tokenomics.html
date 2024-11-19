@@ -3,182 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>River Nile Token - Home</title>
+    <title>Tokenomics - River Nile Token</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <link rel="stylesheet" href="styles/style.css">
-
-</head>
-<style>
-    /* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-body {
-    background-color: #f7f8fa;
-    /* color: #333; */
-    line-height: 1.8;
-    padding: 20px;
-    background-image: url(block\ 3.jpg);
-    background-size: cover;
-    background-position: fixed;
-}
-
-header {
-    /* background-color: #005480; */
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    height: 105px;
-}
-.transparent-blue {
-      background-color:  rgba(255, 255, 255, 0.2);
-      color: white; 
-      padding: 20px;
-      text-align: center;
-      /* border: 1px solid #000;  */
-    }
-
-header h1 {
-    font-size: 24px;
-}
-
-nav ul {
-    list-style: none;
-    text-align: center;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 70px;
-}
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-section {
-    background-color: none;
-    color: white;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /* width: 80%; */
-    /* text-align: center; */
-    margin-left: 200px;
-    margin-right: 200px;
-}
-
-h2, h3 {
-    color: white;
-}
-
-ul {
-    margin-top: 10px;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-footer {
-    text-align: center;
-    padding: 15px 0;
-    /* background-color: #333; */
-    color: white;
-    margin-top: 20px;
-}
-.transparent-dack {
-      background-color: rgba(128, 128, 128, 0.2);
-      color: white; /* Make text visible on blue background */
-      padding: 20px;
-      text-align: center;
-      margin-bottom: 2px;
-      /* border: 1px solid #000; */
-    }
-
-
-footer a {
-    color: #ffbb33;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: blue;
-}
-
-@media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-}
-   /* Setting the canvas size for the chart */
-   #tokenomicsChart {
-            width: 20px; /* You can adjust the width here */
-            height: 20px; /* And the height here */
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
         }
 
-        .tokenomicsChart{
-            width: 400px; /* You can adjust the width here */
-            height: 400px;
+        body {
+            background-color: #f7f8fa;
+            line-height: 1.8;
+            padding: 20px;
+            background-image: url(block\ 3.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .transparent-blue {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+            display: flex;
             align-items: center;
-            align-content: center;
+            justify-content: center;
         }
-        label{
+
+        header img {
+            width: 50px;
+            height: auto;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            color: white;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+        }
+
+        h2, h3 {
             color: white;
         }
-        
-      h1{
-        margin-top: 0%;
-        float: left;
-      }
-      img{
-        margin-top: 0px;
-        border-radius: 50%;
-  object-fit: cover;
-      }
 
-/* @media (max-width: 768px) {
-  ul{
-    flex-direction: column;
-    align-items: flex-start;
-  }
-} */
+        ul {
+            margin-top: 10px;
+        }
 
-</style>
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .transparent-dack {
+            background-color: rgba(128, 128, 128, 0.2);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ffbb33;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Chart */
+        .tokenomicsChart {
+            width: 100%;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            .tokenomicsChart {
+                max-width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header img {
+                width: 40px;
+            }
+
+            h2 {
+                font-size: 20px;
+                text-align: center;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            ul li {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
 <body>
     <header class="transparent-blue">
-        <h1><img src="logo.jpg" alt="River Nile Token Logo" class="logo" width="100px" height="auto">
+        <h1>
+            <img src="logo.jpg" alt="River Nile Token Logo">
+            River Nile Token
         </h1>
         <nav>
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="how_to_buy.html">How to Buy</a></li>
-              <li><a href="tokenomics.html">Tokenomics</a></li>
-              <li><a href="roadmap.html">Roadmap</a></li>
-              <!-- <li class="dropdown">
-                <a href="#" class="dropbtn">More</a>
-                <ul class="dropdown-content">
-                  <li><a href="faq.html">FAQ</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                </ul>
-              </li> -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="how_to_buy.html">How to Buy</a></li>
+                <li><a href="tokenomics.html">Tokenomics</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
             </ul>
-          </nav>
-              
+        </nav>
     </header>
 
     <section id="tokenomics">
@@ -190,7 +191,6 @@ footer a:hover {
             <canvas id="tokenomicsChart"></canvas>
         </div>
         
-    
         <h3>Transaction Fees</h3>
         <p>Transaction fees on the network are set between 0.01% and 1%, varying by transaction type. These fees are utilized for:</p>
         <ul>
@@ -214,7 +214,6 @@ footer a:hover {
         <p>As outlined in our roadmap, RVNL aims to expand its utility through strategic partnerships, increasing accessibility, and enhancing user engagement through governance features. The tokenomics will evolve to adapt to new opportunities and challenges in the blockchain space.</p>
     </section>
     
-
     <footer class="transparent-dack">
         <p>Follow us on <a href="https://x.com" target="_blank">X Platform</a>, <a href="https://telegram.me" target="_blank">Telegram</a>, and <a href="https://instagram.com" target="_blank">Instagram</a>.</p>
     </footer>
@@ -251,14 +250,11 @@ footer a:hover {
                         position: 'top',
                     },
                     tooltip: {
-                        enabled: true,
                         callbacks: {
                             label: function(tooltipItem) {
                                 let sum = 0;
                                 let dataArr = tooltipItem.dataset.data;
-                                dataArr.map(data => {
-                                    sum += Number(data);
-                                });
+                                dataArr.forEach(data => sum += data);
                                 let percentage = (tooltipItem.raw / sum * 100).toFixed(1);
                                 return `${tooltipItem.label}: ${percentage}%`;
                             }
@@ -268,7 +264,5 @@ footer a:hover {
             }
         });
     </script>
-    <script src="script.js"></script>
-    <script src="scripts/connectWallet.js"></script>
 </body>
 </html>

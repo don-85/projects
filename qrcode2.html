@@ -21,31 +21,34 @@
             padding: 20px;
             background-image: url(block\ 3.jpg);
             background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
         }
 
         header {
-            /* background-color: #007bff; */
-            color: #ffffff;
+            color: white;
             padding: 20px;
             text-align: center;
             font-size: 24px;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 100%;
+            max-width: 600px;
         }
-        .transparent-blue {
-      background-color:  rgba(255, 255, 255, 0.2);
-      color: white; 
-      padding: 20px;
-      text-align: center;
-      /* border: 1px solid #000;  */
-    }
-
 
         section {
             background: #ffffff;
-            padding: 20px;
+            padding: 50px;
             margin-top: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
+            width: 100%;
+            max-width: 600px;
+            
         }
 
         .qrcode-container {
@@ -53,6 +56,9 @@
             justify-content: space-around;
             margin-top: 20px;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 50px;
+            height: 400px;
         }
 
         .qrcode-item {
@@ -70,27 +76,55 @@
             width: 160px;
             height: 160px;
             margin: 0 auto;
+            gap: 50px;
+
         }
 
         footer {
             text-align: center;
-            padding: 15px 0;
-            /* background-color: #333; */
-            color: white;
+            padding: 15px 20px;
             margin-top: 30px;
+            border-radius: 8px;
+            background-color: rgba(128, 128, 128, 0.2);
+            color: white;
+            width: 100%;
+            max-width: 600px;
         }
-        .transparent-dack {
-      background-color: rgba(128, 128, 128, 0.2);
-      color: white; /* Make text visible on blue background */
-      padding: 20px;
-      text-align: center;
-      margin-bottom: 2px;
-      /* border: 1px solid #000; */
-    }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .qrcode-container {
+                flex-direction: column;
+            }
+
+            #qrcode1, #qrcode2 {
+                width: 140px;
+                height: 140px;
+            }
+
+            .qrcode-item label {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header, section, footer {
+                padding: 15px;
+            }
+
+            #qrcode1, #qrcode2 {
+                width: 120px;
+                height: 120px;
+            }
+
+            .qrcode-item label {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
-    <header class="transparent-blue">
+    <header>
         <h1>River Nile Token</h1>
         USDT-BEP20 & USDT-TRC20
     </header>
@@ -108,16 +142,14 @@
         </div>
     </section>
 
-    <footer class="transparent-dack">
+    <footer>
         &copy; 2024 River Nile Token
     </footer>
 
     <script>
-        var qrcode1Container = document.getElementById('qrcode1');
-        var qrcode2Container = document.getElementById('qrcode2');
-
-        // QR Code 1: USDT-BEP20
-        var qrCode1 = new QRCode(qrcode1Container, {
+        // Generate QR Code for USDT-BEP20
+        const qrcode1Container = document.getElementById('qrcode1');
+        new QRCode(qrcode1Container, {
             text: "0xec7A4Af44Eaa4c7afd9C65a1bfAD8877a4aEb635",
             width: 160,
             height: 160,
@@ -126,8 +158,9 @@
             correctLevel: QRCode.CorrectLevel.H
         });
 
-        // QR Code 2: USDT-TRC20
-        var qrCode2 = new QRCode(qrcode2Container, {
+        // Generate QR Code for USDT-TRC20
+        const qrcode2Container = document.getElementById('qrcode2');
+        new QRCode(qrcode2Container, {
             text: "TFdXBn7gsGVU3uSDnvLvHC3MPwavqfMT7V",
             width: 160,
             height: 160,

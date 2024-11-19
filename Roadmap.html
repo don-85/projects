@@ -3,173 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>River Nile Token - Home</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Roadmap - River Nile Token</title>
+    <style>
+        /* General Reset and Basic Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            line-height: 1.5;
+            padding: 20px;
+            background-image: url(block\ 3.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            color: #ffffff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .transparent-blue {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header img {
+            width: 50px;
+            height: auto;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Roadmap Section */
+        section#roadmap {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+        }
+
+        h2, h3 {
+            color: goldenrod;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        ol {
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        ol li {
+            flex: 1 1 45%; /* Each item takes 45% width */
+            list-style: none;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: rgba(2, 33, 66, 0.3);
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        ol li:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #ffc107;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            ol {
+                flex-direction: column;
+            }
+
+            ol li {
+                flex: 1 1 100%; /* Full width on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header img {
+                width: 40px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            ol li {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+    </style>
 </head>
-<style> 
- /* General Reset and Basic Styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
-    color: #212529;
-    line-height: 1.5;
-    padding: 20px;
-    background-image: url(block\ 3.jpg);
-    background-size: cover;
-}
-
-header {
-    /* background-color:#005480; */
-    color: #ffffff;
-    padding: 10px 20px;
-    text-align: center;
-    height: 105px;
-}
-.transparent-blue {
-      background-color:  rgba(255, 255, 255, 0.2);
-      color: white; 
-      padding: 20px;
-      text-align: center;
-      /* border: 1px solid #000;  */
-    }
-
-
-header h1 {
-    margin: 0;
-}
-
-nav ul {
-    list-style-type: none;
-    text-align: center;
-    padding: 10px;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 70px;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Section Styling for Roadmap */
-section#roadmap {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    margin-left: 200px;
-    margin-right: 200px;
-}
-
-h2, h3 {
-    color: goldenrod;
-}
-h2{
-    text-align: center;
-}
-
-ol {
-    padding-left: 20px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-ol li {
-    flex: 1 1 50%; /* Each li takes up 50% width */
-    margin-bottom: 20px;
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
-    cursor: pointer; /* Indicates the item is interactive */
-    padding: 10px;
-}
-
-ol li:hover {
-    transform: scale(1.05); /* Scales up li on hover */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adds shadow for popping effect */
-}
-
-ol li {
-    display: inline-block; /* Makes h3 inline for background */
-    background-color:rgba(2, 33, 66, 0.3);
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-/* Footer Styling */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 20px;
-    margin-top: 20px;
-    
-}
-.transparent-dack {
-      background-color: rgba(128, 128, 128, 0.2);
-      color: white; /* Make text visible on blue background */
-      padding: 20px;
-      text-align: center;
-      margin-bottom: 2px;
-      /* border: 1px solid #000; */
-    }
-
-footer a {
-    color: #ffc107;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin-top: 10px;
-    }
-
-    ol li {
-        flex: 1 1 100%; /* Each li takes full width on smaller screens */
-        text-align: left; /* Default text alignment on smaller screens */
-        transform: 2px; /* No transform on smaller screens to avoid layout issues */
-        box-shadow: 5px; /* No box-shadow on hover on smaller screens for consistency */
-    }
-
-    ol li {
-        background-color: transparent;
-        color: #031120;
-        padding: 0;
-    }
-}
-h1{
-        margin-top: 0%;
-        float: left;
-      }
-      img{
-        margin-top: 0px;
-        border-radius: 50%;
-  object-fit: cover;
-      }
-</style>
 <body>
-    <header class="transparent-blue ">
-        <h1><img src="logo.jpg" alt="River Nile Token Logo" class="logo" width="100px" height="auto">
+    <header class="transparent-blue">
+        <h1>
+            <img src="logo.jpg" alt="River Nile Token Logo">
+            River Nile Token
         </h1>
         <nav>
             <ul>
@@ -179,7 +187,7 @@ h1{
                 <li><a href="tokenomics.html">Tokenomics</a></li>
                 <li><a href="roadmap.html">Roadmap</a></li>
             </ul>
-        </nav>        
+        </nav>
     </header>
 
     <section id="roadmap">
@@ -209,7 +217,5 @@ h1{
     <footer>
         <p>Follow us on <a href="https://x.com" target="_blank">X Platform</a>, <a href="https://telegram.me" target="_blank">Telegram</a>, and <a href="https://instagram.com" target="_blank">Instagram</a>.</p>
     </footer>
-    <script src="script.js"></script>
-    <script src="scripts/connectWallet.js"></script>
 </body>
 </html>
