@@ -117,7 +117,7 @@
         }
 
         footer a {
-            color: #59C7EA;
+            color:goldenrod;
             text-decoration: none;
             margin: 0 10px;
         }
@@ -191,13 +191,13 @@
     <section id="how-to-buy">
         <h2>How to Buy RVNL</h2>
         <p>Only deposit funds using decentralized crypto wallets. Avoid using wallets from centralized crypto exchanges. Instead, use wallets such as MetaMask or Trust Wallet.</p>
-        <button id="connectWallet" class="button">
+       <button>
             <a href="qrcode2.html" target="_blank" style="text-decoration: none; color: white;">SCAN QR CODE</a>
-        </button>
+       
     </section>
 
     <footer class="transparent-dack">
-        <p>Follow us on <a href="https://x.com" target="_blank">X Platform</a>, <a href="https://telegram.me" target="_blank">Telegram</a>, and <a href="https://instagram.com" target="_blank">Instagram</a>.</p>
+        <p>Follow us on <a href="https://x.com/RiverNileToken?t=oxikv29w9Z6x28idpYyJkQ&s=09" target="_blank">X Platform</a>, <a href="https://telegram.me" target="_blank">Telegram</a>, and <a href="https://instagram.com" target="_blank">Instagram</a>.</p>
     </footer>
 
     <script src="script.js"></script>
@@ -225,6 +225,14 @@
             console.log('MetaMask is not installed. Please install MetaMask!');
             alert('MetaMask is not installed. Please install MetaMask to use this feature.');
         }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    if (window.history && history.pushState) {
+        const pathWithoutExtension = window.location.pathname.replace('.html', '');
+        window.history.replaceState({}, '', pathWithoutExtension);
+    }
+});
     </script>
 </body>
 </html>

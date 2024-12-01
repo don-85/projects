@@ -10,7 +10,6 @@
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
@@ -39,7 +38,7 @@
             max-width: 600px;
         }
 
-        section {
+        /* section {
             background: #ffffff;
             padding: 50px;
             margin-top: 20px;
@@ -47,9 +46,9 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
             width: 100%;
-            max-width: 600px;
+            max-width: 800px;
             
-        }
+        } */
 
         .qrcode-container {
             display: flex;
@@ -58,7 +57,8 @@
             align-items: center;
             flex-wrap: wrap;
             gap: 50px;
-            height: 400px;
+            height: 800px;
+            width: 600px;
         }
 
         .qrcode-item {
@@ -86,7 +86,7 @@
             margin-top: 30px;
             border-radius: 8px;
             background-color: rgba(128, 128, 128, 0.2);
-            color: white;
+          color: white;
             width: 100%;
             max-width: 600px;
         }
@@ -121,10 +121,65 @@
                 font-size: 14px;
             }
         }
+        ul {
+            margin: 20px 0;
+            padding-left: 20px;
+
+        }
+
+        li {
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(240, 123, 240);
+            font-weight: 700;
+        }
+        .copy-container {
+            position: relative;
+            max-width: 600px;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+
+        .copy-box {
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .copy-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background-color: #6200ea;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .copy-button:hover {
+            background-color: #3700b3;
+        }
+        label{
+            color: white;
+        }
     </style>
 </head>
 <body>
     <header>
+        <nav>
+            <ul>
+                <li><a href="how_to_buy.html">Back To How to Buy</a></li>
+                
+            </ul>
+        </nav>
         <h1>River Nile Token</h1>
         USDT-BEP20 & USDT-TRC20
     </header>
@@ -132,20 +187,33 @@
     <section>
         <div class="qrcode-container">
             <div class="qrcode-item">
+                <div class="copy-container">
+                    <div class="copy-box" id="copyBox">
+                        0xec7A4Af44Eaa4c7afd9C65a1bfAD8877a4aEb635
+                    </div>
+                    <button class="copy-button" onclick="copyText()">Copy</button>
+                </div>
                 <label>USDT-BEP20</label>
                 <div id="qrcode1"></div>
             </div>
             <div class="qrcode-item">
+                <div class="copy-container">
+                    <div class="copy-box" id="copyBox">
+                        TFdXBn7gsGVU3uSDnvLvHC3MPwavqfMT7V
+                    </div>
+                    <button class="copy-button" onclick="copyText()">Copy</button>
+                </div>
                 <label>USDT-TRC20</label>
                 <div id="qrcode2"></div>
             </div>
         </div>
     </section>
 
+    
     <footer>
         &copy; 2024 River Nile Token
     </footer>
-
+    
     <script>
         // Generate QR Code for USDT-BEP20
         const qrcode1Container = document.getElementById('qrcode1');
@@ -168,6 +236,27 @@
             colorLight: "#ffffff",
             correctLevel: QRCode.CorrectLevel.H
         });
+    </script>
+    <script>
+        function copyText() {
+            const copyBox = document.getElementById('copyBox');
+            const text = copyBox.innerText;
+    
+            // Create a temporary textarea element
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = text;
+            document.body.appendChild(tempTextArea);
+    
+            // Select and copy the text
+            tempTextArea.select();
+            document.execCommand('copy');
+    
+            // Remove the temporary textarea
+            document.body.removeChild(tempTextArea);
+    
+            // Alert the user
+            alert('Text copied to clipboard!');
+        }
     </script>
 </body>
 </html>
